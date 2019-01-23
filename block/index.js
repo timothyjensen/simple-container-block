@@ -27,7 +27,16 @@ registerBlockType( "timothyjensen/simple-container-block", {
     src: "editor-contract"
   },
   category: "layout",
-  attributes: blockAttributes,
+  attributes: {
+    className: {
+      type: "string",
+      default: ""
+    },
+    anchor: {
+      type: "string",
+      default: ""
+    }
+  },
   supports: {
     className: false,
     align: [ "wide", "full" ]
