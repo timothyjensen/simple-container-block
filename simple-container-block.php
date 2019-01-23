@@ -11,7 +11,7 @@
  * Plugin Name: Simple Container Block
  * Plugin URI:  https://github.com/timothyjensen/simple-container-block
  * Description: Provides a simple, lightweight container for other blocks.
- * Version:     1.0.0
+ * Version:     1.1.0
  * Author:      Tim Jensen
  * Author URI:  https://www.timjensen.us
  * Text Domain: simple-container-block
