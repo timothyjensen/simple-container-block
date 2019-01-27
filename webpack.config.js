@@ -100,6 +100,9 @@ const config = {
   ],
   stats: {
     children: false
+  },
+  watchOptions: {
+    poll: true
   }
 };
 
