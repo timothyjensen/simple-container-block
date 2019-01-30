@@ -40,11 +40,11 @@ function register_block() {
 		'timothyjensen/simple-container-block', [
 			'editor_script'   => 'simple-container-block-js',
 			'attributes'      => [
-				'className' => [
+				'anchor'    => [
 					'type'    => 'string',
 					'default' => '',
 				],
-				'anchor'    => [
+				'className' => [
 					'type'    => 'string',
 					'default' => '',
 				],

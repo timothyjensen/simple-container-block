@@ -28,13 +28,13 @@ registerBlockType( "timothyjensen/simple-container-block", {
   },
   category: "layout",
   attributes: {
-    className: {
+    cssId: {
       type: "string",
       default: ""
     },
-    anchor: {
+    className: {
       type: "string",
-      default: ""
+      default: "sbc-container"
     }
   },
   supports: {

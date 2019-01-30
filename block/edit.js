@@ -9,20 +9,27 @@ import {
   InspectorAdvancedControls
 } from '@wordpress/editor';
 
+/**
+ * Internal dependencies
+ */
+import { containerAttributes } from "./helpers";
+
 const SimpleContainer = ( props ) => {
+  const htmlAttributes = containerAttributes( props.attributes );
+
   return (
     <Fragment>
-      <div id={ props.attributes.anchor } className={ props.attributes.className }>
+      <div { ...htmlAttributes } >
         <InnerBlocks/>
       </div>
 
       <InspectorAdvancedControls>
         <TextControl
           label={ __( 'CSS ID', "simple-container-block" ) }
-          value={ props.attributes.anchor || '' }
+          value={ props.attributes.cssId || '' }
           onChange={ ( value ) => {
             props.setAttributes( {
-              anchor: value
+              cssId: value
             } );
           } }
         />

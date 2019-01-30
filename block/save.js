@@ -3,24 +3,16 @@
  */
 import { InnerBlocks } from '@wordpress/editor';
 
+/**
+ * Internal dependencies
+ */
+import { containerAttributes } from "./helpers";
+
 const SaveBlock = ( props ) => {
-
-  const shouldApplyDefaultClass = (htmlAttributes) => {
-    return ! htmlAttributes.id && ! props.attributes.className
-  };
-
-  const htmlAttributes = {};
-
-  if ( props.attributes.anchor && props.attributes.anchor.length ) {
-    htmlAttributes.id = props.attributes.anchor;
-  }
-
-  if ( shouldApplyDefaultClass( htmlAttributes ) ) {
-    htmlAttributes.className = 'scb-container';
-  }
+  const htmlAttributes = containerAttributes( props.attributes );
 
   return (
-    <div {...htmlAttributes}>
+    <div { ...htmlAttributes }>
       <InnerBlocks.Content/>
     </div>
   );
